@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taste of Sri Lanka | Authentic Cuisine</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <style>
+      
+        /* --- CSS STYLES --- */
+        :root {
+            --primary-blue: #005b96;
+            --leafy-green: #2e8b57;
+            --warm-gold: #ffc107;
+            --off-white: #f8f9fa;
+            --text-dark: #333;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--text-dark);
+            padding-top: 70px; /* Space for fixed navbar */
+            scroll-behavior: smooth;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            backdrop-filter: blur(10px);
+        }
+        .navbar-brand {
+            font-weight: bold;
+            color: var(--primary-blue) !important;
+            font-size: 1.5rem;
+        }
+        .nav-link {
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        .nav-link:hover, .nav-link.active {
+            color: var(--leafy-green) !important;
+        }
+        .btn-reserve {
+            background-color: var(--primary-blue);
+            color: #fff;
+            border-radius: 20px;
+            padding: 0.5rem 1.5rem;
+            border: none;
+        }
+        .btn-reserve:hover {
+            background-color: var(--leafy-green);
+            color: #fff;
+        }
+
+        /* Sections */
+        section {
+            padding: 80px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        /* Hero Section */
+        .hero-section {
+          background: url('https://i.pinimg.com/1200x/4c/d9/0a/4cd90af01e2f0a6b73fbc8542704071a.jpg') no-repeat center center/cover;
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          justify-content: center;
+          align-items: center;
+           display: flex;display: flex;
+           
+          }
+          .text{
+            color: #fff;
+            font-size: 40px;
+            letter-spacing: 2px;
+            text-shadow: 10px 10px 10px #000;
+            font-family: italic;
+            font-size:110px;
+            font-family: "Boldonse", system-ui;
+          }
+
+        /* Cards */
+        .card {
+            border: none;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+        }
+        .price-tag {
+            font-weight: bold;
+            color: var(--primary-blue);
+            font-size: 1.2rem;
+        }
+
+        /* Map */
+        .map-container iframe {
+            width: 100%;
+            height: 400px;
+            border: 0;
+            border-radius: 10px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-blue);
+            color: white;
+            padding: 3rem 0;
+        }
+        footer a { color: var(--warm-gold); text-decoration: none; }
+
+        /* Utilities */
+        .text-gold { color: var(--warm-gold); }
+        .text-green { color: var(--leafy-green); }
+    
+    </style>
+    
+</head>
+<body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="100">
+
+    <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="#home">🌴 Taste of Sri Lanka</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#culture">Culture</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#locations">Locations</a></li>
+                    <li class="nav-item ms-2">
+                        <a class="btn btn-reserve" href="#contact">Book Table</a>
+                        <a href="D:\sabaragamu\new project\flex\test.html" class="btn btn-reserve">ORDER NOW</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero-section">
+        <div class="container animate__animated animate__fadeInUp">
+            <h1 class="text">A Culinary Journey<br>Through Ceylon</h1>
+            <p class="dis">Authentic spices, fresh seafood, and ancient recipes.
+              <style>
+                .dis{
+                  color: #fff;
+                  font-size: 50px;
+                  text-shadow: 10px 10px 10px #000;
+                }
+                
+              </style>
+            </p>
+            <a href="#menu" class="btn btn-lg btn-warning text-dark fw-bold me-2 px-4">View Menu</a>
+            <a href="#contact" class="btn btn-lg btn-outline-light px-4">Reserve</a>
+        </div>
+    </section>
+
+    <section id="menu" class="bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="text-green fw-bold"><b>Our Menu</b></h2>
+                <p class="text-muted">We hope to add more menus as requested by our valued customers, and we need your support for that.</p>
+            </div>
+
+            <div class="row mb-4 g-3">
+                <div class="col-lg-8">
+                    <div class="btn-group flex-wrap shadow-sm" role="group">
+                        <button type="button" class="btn btn-white filter-btn active" data-filter="all">All</button>
+                        <button type="button" class="btn btn-white filter-btn" data-filter="mains">Mains</button>
+                        <button type="button" class="btn btn-white filter-btn" data-filter="seafood">Seafood</button>
+                        <button type="button" class="btn btn-white filter-btn" data-filter="vegetarian">Vegetarian</button>
+                        <button type="button" class="btn btn-white filter-btn" data-filter="desserts">Desserts</button>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <input type="text" id="searchDish" class="form-control shadow-sm" placeholder="Search dishes (e.g. Crab, Hopper)...">
+                </div>
+            </div>
+             <div class="row" id="menu-container">
+                </div>
+
+           
+        </div>
+    </section>
+
+    <section id="culture">
+        <div class="container">
+            <h2 class="text-center mb-5 fw-bold">Food Culture & Heritage</h2>
+            <div class="row align-items-center">
+                <div class="col-md-6 mb-4">
+                    <img src="https://i.pinimg.com/1200x/c0/2e/5c/c02e5c1acdd16dbb5670971d1a905505.jpg" class="img-fluid rounded shadow" alt="Spices">
+                </div>
+                <div class="col-md-6">
+                    <div class="accordion shadow-sm" id="cultureAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                                    The Spice Island
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#cultureAccordion">
+                                <div class="accordion-body">
+                                    Sri Lanka is the home of True Cinnamon. Our cuisine is defined by roasted curry powder, black pepper, cardamom, and the aromatic curry leaf.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                                    Traditional Dining
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#cultureAccordion">
+                                <div class="accordion-body">
+                                    Rice and Curry is the staple. It is traditionally eaten with the right hand to mix the textures and flavors of the dhal, sambols, and curries together.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                                    Festive Foods
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#cultureAccordion">
+                                <div class="accordion-body">
+                                    During the Sinhalese & Tamil New Year, tables are filled with Kiribath (milk rice), Kavum (oil cakes), and Kokis (crispy rosettes).
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5 fw-bold">Gallery</h2>
+            <div class="row g-3">
+                <!--<div class="col-md-4 col-6">
+                    <img src="https://i.pinimg.com/1200x/72/96/31/72963199248bb54679f9dafbac8e2c0a.jpg" class="img-fluid rounded shadow cursor-pointer" onclick="openLightbox(this.src)">
+                </div>-->
+                <div class="https://i.pinimg.com/736x/23/ff/0e/23ff0ebd46a1840d90f9a36ce9e193e0.jpg" class="img-fluid rounded shadow cursor-pointer" onclick="openLightbox(this.src)">
+                </div>
+                <div class="col-md-4 col-6">
+                    <img src="https://i.pinimg.com/736x/7e/0f/0d/7e0f0de2b194d144f69b44fcc6c5bd0b.jpg" class="img-fluid rounded shadow cursor-pointer" onclick="openLightbox(this.src)">
+                </div>
+                <div class="col-md-4 col-6">
+                    <img src="https://i.pinimg.com/736x/35/c5/69/35c569ffc78a6146f24ca3203657b692.jpg" class="img-fluid rounded shadow cursor-pointer" onclick="openLightbox(this.src)">
+                </div>
+                <div class="col-md-4 col-6">
+                    <img src="https://i.pinimg.com/736x/cb/87/91/cb879122bf3c1cb4a2d23a6e5b453a95.jpg" class="img-fluid rounded shadow cursor-pointer" onclick="openLightbox(this.src)">
+                </div>
+                <!--<div class="col-md-4 col-6">
+                    <img src="https://i.pinimg.com/736x/80/19/da/8019dac02c69841625b9bf553b5416cb.jpg" class="img-fluid rounded shadow cursor-pointer" onclick="openLightbox(this.src)">
+                </div>-->
+            </div>
+        </div>
+    </section>
+
+    <section id="locations">
+        <div class="container">
+            <h2 class="text-center mb-5 fw-bold">Our Locations</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h4 class="card-title text-primary">Colombo Flagship</h4>
+                            <p class="card-text">Located in the heart of the city with ocean views.</p>
+                            <ul>
+                                <li>123 Galle Road, Colombo 03</li>
+                                <li>Open: 10:00 AM - 11:00 PM</li>
+                                <li>Parking: Valet Available</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h4 class="card-title text-primary">Galle Fort Branch</h4>
+                            <p class="card-text">Inside the historic Dutch Fort.</p>
+                            <ul>
+                                <li>45 Church Street, Galle Fort</li>
+                                <li>Open: 11:00 AM - 10:00 PM</li>
+                                <li>Atmosphere: Colonial Heritage</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="bg-dark text-white">
+        <div class="container">
+            <h2 class="text-center mb-5 text-gold">Reserve a Table</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <form id="contactForm" class="needs-validation bg-white p-4 rounded text-dark" novalidate>
+                        <div class="mb-3">
+                            <label class="form-label">Name</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Phone</label>
+                            <input type="tel" class="form-control" pattern="[0-9]*" required>
+                        </div>
+                        <div class="row">
+                            <div class="col-6 mb-3">
+                                <label class="form-label">Date</label>
+                                <input type="date" class="form-control" required>
+                            </div>
+                            <div class="col-6 mb-3">
+                                <label class="form-label">Time</label>
+                                <input type="time" class="form-control" required>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-reserve w-100">Confirm Booking</button>
+                    </form>
+                </div>
+                <div class="col-md-6 map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63371.81529707454!2d79.82118589358064!3d6.921837369626986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae253d10f7a7003%3A0x320b2e4d32d3838d!2sColombo%2C%20Sri%20Lanka!5e0!3m2!1sen!2sus!4v1632996210222!5m2!1sen!2sus" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-center">
+        <div class="container">
+            <p class="mb-2">© 2023 Taste of Sri Lanka. All Rights Reserved.</p>
+            <small class="text-white-50">Designed for authentic flavors.</small>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="dishDetailModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body pt-0">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="" id="modalDishImg" class="img-fluid rounded mb-3" style="width:100%; height:300px; object-fit:cover;">
+                        </div>
+                        <div class="col-md-6">
+                            <h3 class="fw-bold" id="modalDishTitle">Title</h3>
+                            <h4 class="text-primary mb-3" id="modalDishPrice">$00</h4>
+                            <p class="fst-italic text-muted" id="modalDishOrigin">Origin</p>
+                            <p id="modalDishDesc">Description</p>
+                            <div class="alert alert-light border">
+                                <small><strong>Ingredients:</strong> <span id="modalDishIngredients"></span></small>
+                            </div>
+                            <button class="btn btn-reserve w-100" data-bs-dismiss="modal" onclick="document.getElementById('contact').scrollIntoView()">Reserve This Dish</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="lightboxModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content bg-transparent border-0">
+                <div class="modal-body text-center p-0">
+                    <img src="" id="lightboxImg" class="img-fluid rounded shadow-lg" style="max-height: 80vh;">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+        // --- DATA: MENU ITEMS (NOW EXPANDED TO 40+ ITEMS) ---
+        const menuData = [
+            // --- SHORT EATS ---
+            { id: 14, name: " Fish Cutlets", category: "short-eats", price: "RS.50", spice: 3, tags: ["Snack"], desc: "Spiced mackerel balls, breaded and deep fried.", origin: "Bentota", ingredients: "Fish, potato, pepper, breadcrumbs.", img: "https://www.theflavorbender.com/wp-content/uploads/2018/06/Baked-Fish-Cutlets-Featured.jpg" },
+            { id: 21, name: "Mutton Rolls", category: "short-eats", price: "RS.100", spice: 4, tags: ["Hot Seller"], desc: "Crispy breaded pancakes rolled with spicy mutton filling.", origin: "Colonial Fusion", ingredients: "Pancake, mutton curry, breadcrumbs.", img: "https://koodai.co.uk/cdn/shop/files/Mutton_roll_1800x1800.jpg?v=1699042288" },
+            { id: 22, name: "Seeni Sambol Bun", category: "short-eats", price: "RS.50", spice: 3, tags: ["V"], desc: "Soft bakery bun filled with caramelized onion relish.", origin: "Sri Lankan Bakery", ingredients: "Flour, onions, sugar, spices.", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMm9A6ckQEOey_sR6UI6x_4yH1A5nl8K0kBw&s" },
+            { id: 23, name: "Fish Patties", category: "short-eats", price: "RS.50", spice: 2, tags: ["Kids Love"], desc: "Buttery pastry folded with savory fish filling.", origin: "Teatime Classic", ingredients: "Pastry dough, tuna, potato.", img: "https://www.theflavorbender.com/wp-content/uploads/2018/01/Sri-Lankan-Fish-Patties-The-Flavor-Bender-Featured-Image-SQ-11.jpg" },
+            { id: 24, name: "Vegetable Roti", category: "short-eats", price: "RS.80", spice: 4, tags: ["V", "Vegan"], desc: "Spicy vegetable mix folded in flatbread and grilled.", origin: "Street Food", ingredients: "Wheat flour, potato, leeks, chili.", img: "https://chefbhadri.food.blog/wp-content/uploads/2020/09/beef-roti-5876-copy-1.jpg" },
+            { id: 25, name: "Maalu Paan (Fish Bun)", category: "short-eats", price: "RS.50", spice: 2, tags: ["Iconic"], desc: "Triangle shaped bun with fish and potato filling.", origin: "Classic Bakery", ingredients: "Fish, potato, pepper, flour.", img: "https://heybro.ca/wp-content/uploads/2023/12/Fish-Bun.webp" },
+            { id: 26, name: "Pol Roti", category: "short-eats", price: "RS.30", spice: 0, tags: ["V"], desc: "Rustic flatbread made with fresh grated coconut.", origin: "Village Home", ingredients: "Flour, coconut, salt.", img: "https://www.theflavorbender.com/wp-content/uploads/2020/05/Pol-Roti-SM-6714.jpg" },
+            { id: 27, name: "Egg Roti", category: "short-eats", price: "RS.100", spice: 1, tags: ["Dinner"], desc: "Flatbread stuffed with egg and grilled.", origin: "Street Cart", ingredients: "Flour, egg, onion.", img: "https://www.chainbaker.com/wp-content/uploads/2021/02/IMG_6577.jpg" },
+            { id: 28, name: "Ulundu Vadai", category: "short-eats", price: "RS.50", spice: 1, tags: ["V", "Vegan"], desc: "Savory donut made from lentil batter.", origin: "Jaffna Style", ingredients: "Urad dhal, onion, green chili, curry leaves.", img: "https://www.196flavors.com/wp-content/uploads/2018/02/ulundu-vadai-1-FP.jpg" },
+            { id: 29, name: "Vegetable Samosa", category: "short-eats", price: "RS.50", spice: 2, tags: ["V", "Vegan"], desc: "Crispy triangle pastry with curried potato.", origin: "Street Snack", ingredients: "Potato, peas, flour, cumin.", img: "https://www.awesomecuisine.com/wp-content/uploads/2014/11/vegetable-samosa.jpg" },
+
+            // --- MAINS ---
+            { id: 1, name: "Sigiriya Lamprais", category: "mains", price: "RS.600", spice: 3, tags: ["GF"], desc: "Rice boiled in stock, with frikkadels, blachan, and curry, wrapped in banana leaf.", origin: "Dutch-Burgher Classic", ingredients: "Samba rice, mixed meat, ash plantain, shrimp paste.", img: "https://upload.wikimedia.org/wikipedia/commons/8/8e/Lamprais_%282%29.jpg" },
+            { id: 5, name: "Chicken Kottu Roti", category: "mains", price: "RS.800", spice: 4, tags: ["Street Food"], desc: "Chopped roti with vegetables, egg, and chicken curry.", origin: "Batticaloa", ingredients: "Godamba roti, carrots, leeks, egg, chicken.", img: "https://thumbs.dreamstime.com/b/kothu-parotta-popular-south-indian-street-food-kerala-made-shredded-porotta-kothu-parotta-popular-south-indian-street-201038983.jpg" },
+            { id: 45, name: "Fried Rice", category: "mains", price: "RS.850", spice: 4, tags: ["Street Food"], desc: "Fried rice is a savory stir-fried rice dish cooked with eggs, veggies, soy sauce, and aromatic seasonings.", origin: "Batticaloa", ingredients: "Kiri Smba Rice,egg, chicken,vegetables .", img: "https://www.onceuponachef.com/images/2023/12/Fried-Rice-Hero-12.jpg" },
+            { id: 9, name: "Traditional Rice & Curry", category: "mains", price: "RS.500", spice: 3, tags: ["GF"], desc: "A feast with 5 different vegetable curries.", origin: "Anuradhapura", ingredients: "Red rice, dhal, beetroot, greens.", img: "https://cdn.tasteatlas.com/images/dishes/a7c96da4df74439f92e41ee94c6885d2.jpg?m=facebook" },
+            { id: 11, name: "Tea-Smoked Chicken", category: "mains", price: "RS.1200", spice: 2, tags: ["GF"], desc: "Chicken smoked over Ceylon tea leaves.", origin: "Adams Peak", ingredients: "Chicken, black tea leaves, honey.", img: "https://cdn.shopify.com/s/files/1/0582/8277/0569/files/Tea-smoked-chicken.jpg?v=1677143581" },
+            { id: 30, name: "String Hoppers (Indi Appa)", category: "mains", price: "RS100", spice: 1, tags: ["V", "Breakfast"], desc: "Steamed rice flour noodles served with Kiri Hodi.", origin: "Traditional", ingredients: "Rice flour, coconut milk gravy, pol sambol.", img: "https://tb-static.uber.com/prod/image-proc/processed_images/4043517143e3b5c9b9c6db7b3128ecdd/30be7d11a3ed6f6183354d1933fbb6c7.jpeg" },
+            { id: 31, name: "Pittu with Coconut Milk", category: "mains", price: "RS.250", spice: 0, tags: ["V", "GF"], desc: "Steamed cylinders of rice flour and coconut.", origin: "Traditional", ingredients: "Rice flour, coconut, warm coconut milk.", img: "https://static-01.daraz.lk/p/4f69455adcd73355475c9c8a0157e561.jpg" },
+            { id: 32, name: "Yellow Rice Feast", category: "mains", price: "RS.500", spice: 2, tags: ["GF"], desc: "Turmeric infused rice with cashew and raisins.", origin: "Festive Dish", ingredients: "Basmati rice, turmeric, cardamom, ghee.", img: "https://www.skinnytaste.com/wp-content/uploads/2008/10/Latin-Yellow-Rice-8-500x500.jpg" },
+            { id: 33, name: "Devilled Chicken", category: "mains", price: "RS450", spice: 5, tags: ["Spicy"], desc: "Chicken stir-fried in a spicy sweet and sour sauce.You can have this with your main meal. Then only an additional fee will be charged.", origin: "Fusion", ingredients: "Chicken, tomato sauce, chili flakes, capsicum.", img: "https://www.islandsmile.org/wp-content/uploads/2018/01/devil-chicken-2-2-720x720.jpg" },
+            { id: 34, name: "Jaffna Red Chicken Curry", category: "mains", price: "RS.150", spice: 4, tags: ["GF", "Spicy"], desc: "A deep red curry using roasted Jaffna curry powder.You can have this with your main meal. Then only an additional fee will be charged.", origin: "Jaffna", ingredients: "Chicken, red chili, fennel, tamarind.", img: "https://www.theflavorbender.com/wp-content/uploads/2018/02/Sri-Lankan-Chicken-Curry-The-Flavor-Bender-Featured-Image-SQ-2.jpg" },
+            { id: 35, name: "Kiribath (Milk Rice)", category: "mains", price: "RS.100", spice: 0, tags: ["V", "GF"], desc: "Rice cooked with thick coconut cream, served with Lunu Miris.", origin: "Celebration Food", ingredients: "White rice, coconut milk.", img: "https://images.aws.nestle.recipes/original/fc95f023e90de2210e32e834194e26ba_milk-rice.jpg" },
+            
+            // --- SEAFOOD ---
+            { id: 2, name: "Jaffna Crab Curry", category: "seafood", price: "RS.250 .", spice: 5, tags: ["Spicy"], desc: "Lagoon crab cooked in a fiery Jaffna curry powder base. You can have this with your main meal. Then only an additional fee will be charged.",  origin: "Northern Peninsula", ingredients: "Blue swimmer crab, murunga leaves, toasted curry.", img: "https://lankasara.com/wp-content/uploads/2025/01/crab-curry.jpg" },
+            { id: 3, name: "Fish Ambul Thiyal", category: "seafood", price: "RS.100", spice: 2, tags: ["GF"], desc: "Sour fish curry cooked with goraka.You can have this with your main meal. Then only an additional fee will be charged.", origin: "Southern Coast", ingredients: "Tuna, goraka, black pepper.", img: "https://theperfectcurry.com/wp-content/uploads/2022/10/PXL_20221004_141950841.PORTRAIT.jpg" },
+            { id: 4, name: "Galle Seafood Platter", category: "seafood", price: "RS.1500", spice: 2, tags: ["Shareable"], desc: "Grilled prawns, calamari, and fish fillet.", origin: "Galle Fort", ingredients: "Prawns, calamari, seer fish, garlic butter.", img: "https://media-cdn.tripadvisor.com/media/photo-s/29/53/7d/58/seafood-platter-for-two.jpg" },
+            { id: 6, name: "Mirissa Grilled Kingfish", category: "seafood", price: "RS.150", spice: 1, tags: ["GF"], desc: "Fresh catch grilled with lime and salt.You can have this with your main meal. Then only an additional fee will be charged.", origin: "Mirissa Beach", ingredients: "Kingfish, lime, sea salt, sambol.", img: "https://images.sbs.com.au/dims4/default/eb0f143/2147483647/strip/true/crop/1500x844+0+79/resize/1280x720!/quality/90/?url=http%3A%2F%2Fsbs-au-brightspot.s3.amazonaws.com%2Fdrupal%2Ffood%2Fpublic%2Frx046_waste_not_want_not_5_of_6.jpg" },
+            { id: 13, name: "Lobster & Coconut", category: "seafood", price: "RS.250", spice: 2, tags: ["Seasonal"], desc: "Fresh lobster with a coconut lime sauce.You can have this with your main meal. Then only an additional fee will be charged.", origin: "Arugam Bay", ingredients: "Rock lobster, coconut cream, lemongrass.", img: "https://globaltableadventure.com/wp-content/uploads/2011/09/kiribati.img_7299.jpg" },
+            { id: 18, name: "Spiced Prawn Curry", category: "seafood", price: "RS.200", spice: 4, tags: ["GF"], desc: "Red curry with tamarind kick.You can have this with your main meal. Then only an additional fee will be charged.", origin: "Trincomalee", ingredients: "Prawns, tamarind, red chili.", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRu0A4W0fwBHZwOQs20PrO1cE9_4EDJOpDdSQ&s" },
+            { id: 19, name: "Cuttlefish Curry", category: "seafood", price: "RS.150", spice: 4, tags: ["GF"], desc: "Black squid curry rich in flavor.You can have this with your main meal. Then only an additional fee will be charged.", origin: "Negombo", ingredients: "Cuttlefish, goraka, black pepper.", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThHRI-nPvCUzfLwS2m8ahjfRs7jap_k-MsEQ&s" },
+            { id: 36, name: "Hot Butter Cuttlefish", category: "seafood", price: "RS.350", spice: 3, tags: ["Bestseller"], desc: "Battered cuttlefish tossed in butter and chili paste.You can have this with your main meal. Then only an additional fee will be charged.", origin: "Colombo Club Style", ingredients: "Cuttlefish, butter, chili paste, capsicum.", img: "https://www.unileverfoodsolutions.lk/dam/global-ufs/mcos/meps/sri-lanka/calcmenu/recipes/LK-recipes/general/hot-butter-cuttlefish/main-header.jpg" },
+            { id: 37, name: "Fried Sprats with Onion", category: "seafood", price: "RS.250", spice: 2, tags: ["Snack"], desc: "Crispy fried small fish with onion and lime.You can have this with your main meal. Then only an additional fee will be charged..", origin: "Coastal Snack", ingredients: "Sprats, red onion, lime, chili.", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKwvOX00c10Om_IY7ixgrNrLUFbsSGzQi7VA&s" },
+
+            // --- VEGETARIAN ---
+            { id: 7, name: "Jackfruit Curry (Polos)", category: "vegetarian", price: "RS.150", spice: 2, tags: ["V", "Vegan"], desc: "Young jackfruit cooked until tender like meat.You can have this with your main meal. Then only an additional fee will be charged.", origin: "Village Staple", ingredients: "Young jackfruit, coconut milk, spices.", img: "https://www.theflavorbender.com/wp-content/uploads/2020/08/Jackfruit-Curry-SM-9775.jpg" },
+            { id: 8, name: "Coconut Sambol", category: "vegetarian", price: "RS.100", spice: 3, tags: ["V"], desc: "Milky rice served with spicy coconut relish.You can have this with your main meal. Then only an additional fee will be charged.", origin: "Polonnaruwa", ingredients: "White rice, coconut milk, chili, lime.", img: "https://media-cdn2.greatbritishchefs.com/media/etbpfsnk/img86979.whqc_1426x713q80.jpg" },
+            { id: 10, name: "Hoppers (Appa)", category: "vegetarian", price: "RS.25", spice: 1, tags: ["V"], desc: "Bowl-shaped pancakes made from fermented rice flour.", origin: "Breakfast Classic", ingredients: "Rice flour, coconut milk, egg (optional).", img: "https://www.hungrylankan.com/wp-content/uploads/2024/06/PXL_20230907_022830223.PORTRAIT-2-500x500.jpg" },
+            { id: 12, name: "Dhal Curry", category: "vegetarian", price: "RS.100", spice: 1, tags: ["V", "Vegan"], desc: "Creamy lentils tempered with mustard seeds.You can have this with your main meal. Then only an additional fee will be charged.", origin: "Dambulla", ingredients: "Red lentils, coconut milk, curry leaves.", img: "https://savvybites.co.uk/wp-content/uploads/2020/02/Red-Lentil-Dhal-Curry-Topaz-2-500x500.jpg" },
+            { id: 17, name: "Mushroom Curry", category: "vegetarian", price: "RS.150", spice: 2, tags: ["V", "Vegan"], desc: "Wild mushrooms in a dark roasted curry.You can have this with your main meal. Then only an additional fee will be charged.", origin: "Sinharaja Forest", ingredients: "Oyster mushrooms, black pepper.", img: "https://www.theflavorbender.com/wp-content/uploads/2021/03/Mushroom-Curry-1754-2.jpg" },
+            { id: 38, name: "Cashew Nut Curry", category: "vegetarian", price: "RS.250", spice: 1, tags: ["V", "Vegan", "Premium"], desc: "Creamy and rich curry made with whole cashews.You can have this with your main meal. Then only an additional fee will be charged.", origin: "Royal Dish", ingredients: "Cashew nuts, coconut milk, green peas.", img: "https://static01.nyt.com/images/2013/01/09/dining/09KITCH_SPAN/09KITCH_SPAN-jumbo-v2.jpg" },
+            { id: 39, name: "Brinjal Moju", category: "vegetarian", price: "RS.150", spice: 3, tags: ["V", "Vegan"], desc: "Sweet, sour, and spicy eggplant pickle.You can have this with your main meal. Then only an additional fee will be charged.", origin: "Must-have Side", ingredients: "Eggplant, vinegar, sugar, mustard.", img: "https://www.islandsmile.org/wp-content/uploads/2018/04/IMG_5675-2.jpg" },
+            { id: 40, name: "Ala Thel Dala", category: "vegetarian", price: "RS.200", spice: 4, tags: ["V", "Vegan"], desc: "Spicy devilled potatoes.You can have this with your main meal. Then only an additional fee will be charged.", origin: "Home Classic", ingredients: "Potatoes, chili flakes, onion.", img: "https://foodkatha.wordpress.com/wp-content/uploads/2015/10/ala-theldala-b1.jpg?w=640" },
+            { id: 41, name: "Gotukola Sambol", category: "vegetarian", price: "RS.50", spice: 1, tags: ["V", "Vegan", "Healthy"], desc: "Fresh pennywort salad with coconut.You can have this with your main meal. Then only an additional fee will be charged.", origin: "Green Salad", ingredients: "Gotukola leaves, lime, coconut.", img: "https://ichef.bbc.co.uk/ace/standard/1600/food/recipes/gotu_kola_sambol_27863_16x9.jpg.webp" },
+
+            // --- DESSERTS ---
+            { id: 15, name: "Watalappan", category: "desserts", price: "RS.100", spice: 1, tags: ["GF"], desc: "Coconut custard with kithul jaggery and spices.", origin: "Malay Influence", ingredients: "Coconut milk, jaggery, eggs, cardamom.", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWibSAMLyN0r7Txqh9IiphUz6RsKO0alPAOQ&s" },
+            { id: 16, name: "Buffalo Curd & Treacle", category: "desserts", price: "RS.150", spice: 0, tags: ["V"], desc: "Creamy curd topped with sweet palm syrup.", origin: "Tissamaharama", ingredients: "Buffalo curd, kithul treacle.", img: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhFW8z-RHQ_A5c-c7pDOYjigAA86qdl7l4GJCaKcXd48xORCORJLbi2K9yi4k5hly_r0YJpwvK2D7UR65v-qoA4YYkRjCIsrc7O3EIlnF3QVO0YIyThBjyuHDd7anZO1D07OTmro19Nkjmk/s640/blogger-image-480065893.jpg" },
+            { id: 20, name: "Tropical Fruit Platter", category: "desserts", price: "RS.250", spice: 0, tags: ["V", "Vegan", "Healthy"], desc: "Mango, papaya, pineapple, and mangosteen.", origin: "Ramboda", ingredients: "Seasonal fruits.", img: "https://i.pinimg.com/1200x/4d/ee/9e/4dee9e37c0675597fb4d6ee9b1d5e8e1.jpg" },
+            { id: 42, name: "Love Cake", category: "desserts", price: "RS.100", spice: 1, tags: ["V"], desc: "Rich semolina cake with cashew and rose essence.", origin: "Portuguese Heritage", ingredients: "Semolina, cashew, honey, rose water.", img: "https://foodvoyageur.com/cdn/shop/articles/20241112021837-traditional-sri-lankan-love-cake-recipe.webp?crop=center&height=1200&v=1746647382&width=1200" },
+            { id: 43, name: "Sago Pudding", category: "desserts", price: "RS.100", spice: 0, tags: ["V", "Vegan"], desc: "Tapioca pearls cooked in coconut milk and jaggery.", origin: "Simple Sweet", ingredients: "Sago, jaggery, coconut milk.", img: "https://thebigmansworld.com/wp-content/uploads/2021/06/sago-pudding4.jpeg" },
+            { id: 44, name: "Ice Cream", category: "desserts", price: "RS.150", spice: 0, tags: ["V"], desc: "All Ice Creams are there", origin: "Ambewela", ingredients: "milk.", img: "https://cdn.britannica.com/50/80550-050-5D392AC7/Scoops-kinds-ice-cream.jpg" }
+        ];
+
+        // --- RENDER MENU ---
+        const menuContainer = document.getElementById('menu-container');
+        
+        function renderMenu(items) {
+            menuContainer.innerHTML = items.map(item => `
+                <div class="col-md-6 col-lg-4 mb-4 animate__animated animate__fadeIn">
+                    <div class="card h-100">
+                        <img src="${item.img}" class="card-img-top" alt="${item.name}" loading="lazy">
+                        <div class="card-body d-flex flex-column">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="card-title">${item.name}</h5>
+                                <span class="price-tag">${item.price}</span>
+                            </div>
+                            <div class="mb-2">
+                                ${item.tags.map(tag => `<span class="badge bg-success me-1">${tag}</span>`).join('')}
+                                <span class="badge bg-danger">🌶️ ${item.spice}/5</span>
+                            </div>
+                            <p class="card-text flex-grow-1 text-muted small">${item.desc}</p>
+                            <button class="btn btn-outline-primary w-100 mt-auto" onclick="openDishModal(${item.id})">View Details</button>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Initial Render
+        renderMenu(menuData);
+
+        // Filter Logic
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelector('.filter-btn.active').classList.remove('active', 'btn-primary', 'text-white');
+                document.querySelector('.filter-btn.active')?.classList.add('btn-white'); 
+                
+                btn.classList.add('active', 'btn-primary', 'text-white');
+                btn.classList.remove('btn-white');
+
+                const category = btn.dataset.filter;
+                const filtered = category === 'all' ? menuData : menuData.filter(item => item.category === category);
+                renderMenu(filtered);
+            });
+        });
+
+        // Search Logic
+        document.getElementById('searchDish').addEventListener('input', (e) => {
+            const term = e.target.value.toLowerCase();
+            const filtered = menuData.filter(item => 
+                item.name.toLowerCase().includes(term) || 
+                item.ingredients.toLowerCase().includes(term)
+            );
+            renderMenu(filtered);
+        });
+
+        // --- MODAL & ORDER LOGIC ---
+        function openDishModal(id) {
+            const dish = menuData.find(d => d.id === id);
+            if(!dish) return;
+
+            document.getElementById('modalDishTitle').innerText = dish.name;
+            document.getElementById('modalDishImg').src = dish.img;
+            document.getElementById('modalDishOrigin').innerText = dish.origin;
+            document.getElementById('modalDishDesc').innerText = dish.desc;
+            document.getElementById('modalDishIngredients').innerText = dish.ingredients;
+            document.getElementById('modalDishPrice').innerText = dish.price;
+            
+           
+            new bootstrap.Modal(document.getElementById('dishDetailModal')).show();
+        }
+
+        function openLightbox(src) {
+            document.getElementById('lightboxImg').src = src;
+            new bootstrap.Modal(document.getElementById('lightboxModal')).show();
+        }
+
+        // --- FORM VALIDATION ---
+        const contactForm = document.getElementById('contactForm');
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            if(contactForm.checkValidity()) {
+                const type = document.getElementById('orderType').value;
+                alert(`Thank you! Your ${type} request has been received.`);
+                contactForm.reset();
+                contactForm.classList.remove('was-validated');
+            } else {
+                e.stopPropagation();
+                contactForm.classList.add('was-validated');
+            }
+        });
+    </script>
+</body>
+</html>

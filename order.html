@@ -1,0 +1,157 @@
+<html>
+    <head>
+        <title>order now</title>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>order now</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="D:\sabaragamu\new project\flex\style.css">
+    </head>
+
+
+    <body >
+        <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="#home">🌴 Taste of Sri Lanka</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="D:\sabaragamu\new project\flex\bac.html#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="D:\sabaragamu\new project\flex\bac.html#menu">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="D:\sabaragamu\new project\flex\bac.html#culture">Culture</a></li>
+                    <li class="nav-item"><a class="nav-link" href="D:\sabaragamu\new project\flex\bac.html#gallery">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="D:\sabaragamu\new project\flex\bac.html#locations">Locations</a></li>
+                    <li class="nav-item ms-2">
+                        <a class="btn btn-reserve" href="D:\sabaragamu\new project\bac.html#contact">Book Table</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+        <section id="order-page">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="order-card animate__animated animate__fadeIn">
+                        <h2 class="text-center mb-4 fw-bold text-primary">Start Your Order</h2>
+                        <p class="text-center text-muted mb-5">We currently only serve <strong>Colombo</strong> and <strong>Galle</strong> regions.</p>
+                        
+                        <form id="orderForm" class="needs-validation" novalidate>
+                            
+                            <div class="row mb-4">
+                                <div class="col-md-6">
+                                    <label class="form-label fw-bold">1. Select Your City (Required)</label>
+                                    <select class="form-select form-select-lg" id="orderCity" required>
+                                        <option value="" selected disabled>Choose City...</option>
+                                        <option value="Colombo">Colombo</option>
+                                        <option value="Galle">Galle</option>
+                                    </select>
+                                    <div class="invalid-feedback">
+                                        We only serve Colombo and Galle. Please select one.
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label fw-bold">2. Service Type</label>
+                                    <select class="form-select form-select-lg" id="serviceType" required>
+                                        <option value="Delivery">Delivery to Doorstep</option>
+                                        <option value="Takeaway">Takeaway / Pickup</option>
+                                        <option value="Dine-in">Table Reservation</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <hr class="my-4">
+
+                            <h5 class="mb-3">3. Your Details</h5>
+                            <div class="row g-3 mb-3">
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" placeholder="Full Name" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="tel" class="form-control" placeholder="Phone Number" pattern="[0-9]*" required>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <input type="text" class="form-control" id="addressField" placeholder="Delivery Address (Street, House No...)">
+                            </div>
+
+                            <div class="row g-3 mb-3">
+                                <div class="col-6">
+                                    <label class="form-label small">Date</label>
+                                    <input type="date" class="form-control" required>
+                                </div>
+                                <div class="col-6">
+                                    <label class="form-label small">Time</label>
+                                    <input type="time" class="form-control" required>
+                                </div>
+                            </div>
+
+                            <div class="mb-4">
+                                <label class="form-label fw-bold">4. Your Order / Items</label>
+                                <textarea id="orderMessage" class="form-control" rows="4" placeholder="Example: 2x Mutton Rolls, 1x Crab Curry, 1x Rice..." required></textarea>
+                                <div class="form-text">Tip: Go to the Menu and click 'Add to Order' to fill this automatically.</div>
+                            </div>
+
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-order-nav btn-lg py-3">CONFIRM ORDER</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="text-center">
+        <div class="container">
+            <p class="mb-2">© 2023 Taste of Sri Lanka. All Rights Reserved.</p>
+            <small class="text-white-50">Designed for authentic flavors.</small>
+        </div>
+    </footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+     // --- MODAL & ORDER LOGIC ---
+        function openDishModal(id) {
+            const dish = menuData.find(d => d.id === id);
+            if(!dish) return;
+
+            document.getElementById('modalDishTitle').innerText = dish.name;
+            document.getElementById('modalDishImg').src = dish.img;
+            document.getElementById('modalDishOrigin').innerText = dish.origin;
+            document.getElementById('modalDishDesc').innerText = dish.desc;
+            document.getElementById('modalDishIngredients').innerText = dish.ingredients;
+            document.getElementById('modalDishPrice').innerText = dish.price;
+            
+           
+            new bootstrap.Modal(document.getElementById('dishDetailModal')).show();
+        }
+
+        function openLightbox(src) {
+            document.getElementById('lightboxImg').src = src;
+            new bootstrap.Modal(document.getElementById('lightboxModal')).show();
+        }
+
+        // --- FORM VALIDATION ---
+        const contactForm = document.getElementById('contactForm');
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            if(contactForm.checkValidity()) {
+                const type = document.getElementById('orderType').value;
+                alert(`Thank you! Your ${type} request has been received.`);
+                contactForm.reset();
+                contactForm.classList.remove('was-validated');
+            } else {
+                e.stopPropagation();
+                contactForm.classList.add('was-validated');
+            }
+        });
+    
+</script>
+
+
+    </body>
+</html>
